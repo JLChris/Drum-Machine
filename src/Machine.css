@@ -1,0 +1,31 @@
+#pads {
+  display: grid;
+  grid-template:
+    "a a a"
+    "a a a"
+    "a a a";
+  gap: 10px;
+  width: 350px;
+  height: 350px;
+  margin: 30px 0 0 20px;
+}
+
+.drum-pad {
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px gray;
+  background-color: #f1f7ed;
+}
+
+.power-on:hover {
+  cursor: pointer;
+}
+
+.power-on:active {
+  background-color: #c2a83e;
+}

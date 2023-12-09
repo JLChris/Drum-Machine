@@ -1,3 +1,14 @@
+import "./Machine.css";
+import heater1 from "./audio/Heater-1.mp3";
+import heater2 from "./audio/Heater-2.mp3";
+import heater3 from "./audio/Heater-3.mp3";
+import heater4 from "./audio/Heater-4_1.mp3";
+import heater5 from "./audio/Heater-6.mp3";
+import kickAndHat from "./audio/Kick_n_Hat.mp3";
+import kick from "./audio/RP4_KICK_1.mp3";
+import closedHH from "./audio/Cev_H2.mp3";
+import openHH from "./audio/Dsc_Oh.mp3";
+
 function Machine(props) {
   const { power, audioTrigger } = props;
   return (
@@ -5,118 +16,64 @@ function Machine(props) {
       <div
         id="Heater-1"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(heater1, e)}
       >
-        <audio
-          id="Q"
-          className="clip"
-          src="./audio/Heater-1.mp3"
-          preload="auto"
-        ></audio>
         Q
       </div>
       <div
         id="Heater-2"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(heater2, e)}
       >
-        <audio
-          id="W"
-          className="clip"
-          src="./audio/Heater-2.mp3"
-          preload="auto"
-        ></audio>
         W
       </div>
       <div
         id="Heater-3"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(heater3, e)}
       >
-        <audio
-          id="E"
-          className="clip"
-          src="./audio/Heater-3.mp3"
-          preload="auto"
-        ></audio>
         E
       </div>
       <div
         id="Heater-4"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(heater4, e)}
       >
-        <audio
-          id="A"
-          className="clip"
-          src="./audio/Heater-4_1.mp3"
-          preload="auto"
-        ></audio>
         A
       </div>
       <div
         id="Clap"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(heater5, e)}
       >
-        <audio
-          id="S"
-          className="clip"
-          src="./audio/Heater-6.mp3"
-          preload="auto"
-        ></audio>
         S
       </div>
       <div
         id="Open-HH"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(openHH, e)}
       >
-        <audio
-          id="D"
-          className="clip"
-          src="./audio/Dsc_Oh.mp3"
-          preload="auto"
-        ></audio>
         D
       </div>
       <div
         id="Kick-and-Hat"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(kickAndHat, e)}
       >
-        <audio
-          id="Z"
-          className="clip"
-          src="./audio/Kick_n_Hat.mp3"
-          preload="auto"
-        ></audio>
         Z
       </div>
       <div
         id="Kick"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(kick, e)}
       >
-        <audio
-          id="X"
-          className="clip"
-          src="./audio/RP4_KICK_1.mp3"
-          preload="auto"
-        ></audio>
         X
       </div>
       <div
         id="Closed-HH"
         className={power ? "drum-pad power-on" : "drum-pad"}
-        onClick={audioTrigger}
+        onClick={(e) => audioTrigger(closedHH, e)}
       >
-        <audio
-          id="C"
-          className="clip"
-          src="./audio/Cev_H2.mp3"
-          preload="auto"
-        ></audio>
         C
       </div>
     </div>

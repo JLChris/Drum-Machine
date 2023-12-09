@@ -1,3 +1,5 @@
+import "./Display.css";
+
 function Display(props) {
   const { display, powerHandler, power, volumeChange, volume } = props;
   return (

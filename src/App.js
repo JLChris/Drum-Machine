@@ -3,22 +3,22 @@ import { useState } from "react";
 import Container from "./Container.js";
 
 function App() {
-  const { power, setPower } = useState(false);
-  const { display, setDisplay } = useState("");
-  const { volume, setVolume } = useState(0.5);
+  const [power, setPower] = useState(false);
+  const [display, setDisplay] = useState("");
+  const [volume, setVolume] = useState(0.5);
 
-  const audioTrigger = (e) => {
-    const audio = e.target.children[0];
-    const text = e.target.getAttribute("id").replaceAll("-", " ");
-    audio.volume = volume;
+  const audioTrigger = (src, e) => {
     if (power) {
+      const audio = new Audio(src);
+      audio.volume = volume;
       audio.play();
+      const text = e.target.getAttribute("id").replaceAll("-", " ");
       setDisplay(text);
     }
   };
 
   const powerHandler = () => {
-    setPower(!power);
+    setPower((p) => !p);
   };
 
   const volumeChange = (e) => {
